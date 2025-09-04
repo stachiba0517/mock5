@@ -14,17 +14,11 @@ function App() {
       <header className="app-header">
         <div className="header-content">
           <div className="logo-section">
-            <h1>🏭 統合SCMシステム</h1>
-            <p>Integrated Supply Chain Management System</p>
+            <h1>🏭 SCMシステム</h1>
           </div>
           <div className="header-stats">
             <div className="stat-item">
-              <span className="stat-value">{new Date().toLocaleDateString('ja-JP')}</span>
-              <span className="stat-label">最終更新</span>
-            </div>
-            <div className="stat-item">
-              <span className="stat-value sync-status">✅ 同期済み</span>
-              <span className="stat-label">システム状態</span>
+              <span className="stat-value sync-status">✅ 稼働中</span>
             </div>
           </div>
         </div>
