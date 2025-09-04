@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Supplier, Contract, PurchaseOrder } from '../types/scm';
+import { Supplier, PurchaseOrder } from '../types/scm';
 import '../styles/SupplierManagement.css';
 
 // モックデータ
@@ -151,8 +151,8 @@ const mockPurchaseOrders: PurchaseOrder[] = [
 ];
 
 const SupplierManagement: React.FC = () => {
-  const [suppliers, setSuppliers] = useState<Supplier[]>(mockSuppliers);
-  const [purchaseOrders, setPurchaseOrders] = useState<PurchaseOrder[]>(mockPurchaseOrders);
+  const [suppliers] = useState<Supplier[]>(mockSuppliers);
+  const [purchaseOrders] = useState<PurchaseOrder[]>(mockPurchaseOrders);
   const [activeTab, setActiveTab] = useState<'suppliers' | 'orders' | 'performance'>('suppliers');
   const [searchTerm, setSearchTerm] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');
@@ -229,7 +229,7 @@ const SupplierManagement: React.FC = () => {
     });
   }, [suppliers, searchTerm, categoryFilter, riskFilter]);
 
-  const categories = [...new Set(suppliers.map(s => s.category))];
+  const categories = Array.from(new Set(suppliers.map(s => s.category)));
 
   const supplierStats = useMemo(() => {
     const active = suppliers.filter(s => s.isActive).length;

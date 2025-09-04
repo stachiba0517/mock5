@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { DemandForecast, SeasonalFactor } from '../types/scm';
 import '../styles/DemandForecasting.css';
 
@@ -370,7 +370,7 @@ const DemandForecasting: React.FC = () => {
           <div className="seasonal-legend">
             <div className="legend-item">
               <div className="legend-color high"></div>
-              <span>需要増加期 (係数 > 1.0)</span>
+              <span>需要増加期 (係数 &gt; 1.0)</span>
             </div>
             <div className="legend-item">
               <div className="legend-color normal"></div>
@@ -378,7 +378,7 @@ const DemandForecasting: React.FC = () => {
             </div>
             <div className="legend-item">
               <div className="legend-color low"></div>
-              <span>需要減少期 (係数 < 1.0)</span>
+              <span>需要減少期 (係数 &lt; 1.0)</span>
             </div>
           </div>
         </div>
