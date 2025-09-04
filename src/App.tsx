@@ -15,7 +15,6 @@ function App() {
         <div className="header-content">
           <div className="header-left"></div>
           <div className="logo-section">
-            <h1>🏭 SCMシステム</h1>
             <div className="status-indicator">
               <span className="status-dot"></span>
               <span className="status-text">稼働中</span>
