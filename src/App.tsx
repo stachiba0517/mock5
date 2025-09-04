@@ -13,12 +13,17 @@ function App() {
     <div className="App">
       <header className="app-header">
         <div className="header-content">
+          <div className="header-left"></div>
           <div className="logo-section">
             <h1>🏭 SCMシステム</h1>
+            <div className="status-indicator">
+              <span className="status-dot"></span>
+              <span className="status-text">稼働中</span>
+            </div>
           </div>
-          <div className="header-stats">
-            <div className="stat-item">
-              <span className="stat-value sync-status">✅ 稼働中</span>
+          <div className="header-right">
+            <div className="current-time">
+              {new Date().toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' })}
             </div>
           </div>
         </div>
